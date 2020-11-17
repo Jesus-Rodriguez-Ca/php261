@@ -93,10 +93,10 @@ function makeLinks($nav){
     return $myReturn;
 } // Ends makeLinks function
 
-?>
 
-<!-- Form php code-->
-<?php
+
+
+
 
 $firstName ='';
 $lastName ='';
@@ -125,17 +125,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
             // We need to declare our errors. Example: if a field is empty send a message saying is empty.
             // If my name is empty, we will hace created a varible called $nameErr and we will say PLease fill out your name and this is assigned to the $nameErr. Now, if it is NOT empty, $name = $_POST['name'];
-    
-    
-    
-    
             
     if(empty($_POST['firstName'])){
                 $firstNameErr = 'Please fill out your first name!';
             }else {
                 $firstName = $_POST['firstName'];
             }
-    if(empty($_POST['lasstName'])){
+    if(empty($_POST['lastName'])){
                 $lastNameErr = 'Please fill out your last name!';
             }else {
                 $lastName = $_POST['lastName'];
@@ -221,7 +217,7 @@ $tel = $_POST['tel'];
         );
 
         mail($to, $subject, $body, $headers);
-       // header('Location: thx.php');
+        header('Location: thx.php');
         
         
     }// end isset
