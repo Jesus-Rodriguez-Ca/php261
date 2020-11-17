@@ -1,7 +1,5 @@
-<?php 
-
-define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
-
+<?php define('THIS_PAGE', basename($_SERVER['PHP_SELF']));?>
+<?php
 // Our gallery php
 
 $people ['Donald_Trump'] = 'trump_President from Nk.';
@@ -17,7 +15,7 @@ $people ['Julian_Castro'] = 'castr_Housing/Urban from TX.';
 
 switch(THIS_PAGE){
     case 'index.php':
-        $title= 'Home paage for our new website';
+        $title= 'Home page for our new website';
         $mainHeadline = 'Welcome to our homepage';
         $center = 'Center';
         $body = 'home';
@@ -52,7 +50,7 @@ switch(THIS_PAGE){
         break;
         
     case 'thx.php':
-        $title= 'Our thank yoo page!';
+        $title= 'Our thank you page!';
         $mainHeadline = 'Thank you for filling out our form!';
         
 //        $center = 'center';
