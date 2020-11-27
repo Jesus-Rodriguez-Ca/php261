@@ -1,4 +1,4 @@
- 
+`  
     <form action="" method="post">
         <fieldset>
 <label>First Name</label>
@@ -68,9 +68,9 @@ if(isset($_POST['tel'])) echo $_POST['tel'];?>">
             <input type="radio" name="privacy" value="<?php 
                     if(isset($_POST['privacy'])) echo htmlspecialchars($_POST['privacy']);?>">
             I agree to your Privacy Policy
-            <span><?php echo $privacyErr; ?></span>
+       <span><?php echo $privacyErr; ?></span>
             
-<!--Radio buttons and checkboxes are very similar -->
+
             <input type="submit" value="Send it!">
             <p><a href="">Reset me!</a></p>
         </fieldset>

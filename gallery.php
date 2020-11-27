@@ -1,5 +1,6 @@
 <?php
 include('config.php'); 
+include('config2.php'); 
 include('includes/header.php');
 ?>
 
@@ -9,7 +10,7 @@ include('includes/header.php');
         
         <h1><?php echo $mainHeadline; ?></h1>
     
-<!--    <img src="images/photo1.jpg" alt="photo">-->
+    <?php echo '<img src="images/people'.$id.'.jpg" alt="photo">'; ?>
             <table class="candidates">
                 <?php foreach($people as $fullName => $image) : ?>
                 <tr>

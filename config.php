@@ -200,7 +200,7 @@ $tel = $_POST['tel'];
              $_POST['tel'],
              $_POST['privacy'])){
         
-        $to = 'manuelrodriguezc29@gmail.com';
+        $to = 'jesus.rodriguez-ca1@seattlecolleges.edu';
         $subject = 'Test email' .date('m/d/y');
         $body = ''. $firstName.' has filled out your form ' .PHP_EOL.'';
         $body .= 'Email: '.$email. ' '.PHP_EOL.'';
@@ -221,4 +221,18 @@ $tel = $_POST['tel'];
     }// end isset
     
 } // close if $_SERVER REQUEST METHOD
+
+//PLEASE REMEMBER - THIS IS PLACED AT THE VERY BOTTOM OF YOUR CONFIG FILE
+/* function myerror($myFile, $myLine, $errorMsg){
+    if(defined('DEBUG') && DEBUG ){
+        echo 'Error in file: <b> '.$myFile.'</b> on line: <b> '.$myLine. '</b>' ;
+        echo 'Error message: <b>'.$errorMsg.'</b>'; 
+        die();
+    }else{
+        echo ' Houston, we have a problem!';
+        die();
+    }
+} */
+
+
 ?>

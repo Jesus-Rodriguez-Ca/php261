@@ -10,7 +10,7 @@ include('includes/header.php');
         <h1><?php echo $mainHeadline; ?></h1>
     
 <!--    <img src="images/photo1.jpg" alt="photo">-->
-      <?php// include('includes/form.php'); ?> 
+      
     </main>
         <aside>
         <h3>This is my aside</h3>

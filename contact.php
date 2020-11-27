@@ -13,10 +13,11 @@ include('includes/header.php');
        <?php include('includes/form.php'); ?> 
     </main>
         <aside>
-        <h3>This is my aside</h3>
-            <i class="fab fa-github"><a link=""></a></i>
+        <h3>Link to GitHub</h3>
+            <a href="https://github.com/Jesus-Rodriguez-Ca/php261" class="fa fa-github" style="font-size: 36px "></a>
         </aside>
         
 <?php
     include ('includes/footer.php');
 ?>
+s
