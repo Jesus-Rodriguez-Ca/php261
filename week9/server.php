@@ -21,14 +21,14 @@ $db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 // register the user
 
-if (isset($_POST['Reg_user'])) {
+if (isset($_POST['reg_user'])) {
     //lets receive all the information
-    $FirstName = mysqli_real_escape_string($db, $_POST['$FirstName']);
-    $LastName = mysqli_real_escape_string($db, $_POST['$LastName']);
-    $UserName = mysqli_real_escape_string($db, $_POST['$UserName']);
-    $Email = mysqli_real_escape_string($db, $_POST['$Email']);
-    $Password_1 = mysqli_real_escape_string($db, $_POST['$Password_1']);
-    $Password_2 = mysqli_real_escape_string($db, $_POST['$Password_2']);
+    $FirstName = mysqli_real_escape_string($db, $_POST['FirstName']);
+    $LastName = mysqli_real_escape_string($db, $_POST['LastName']);
+    $UserName = mysqli_real_escape_string($db, $_POST['UserName']);
+    $Email = mysqli_real_escape_string($db, $_POST['Email']);
+    $Password_1 = mysqli_real_escape_string($db, $_POST['Password_1']);
+    $Password_2 = mysqli_real_escape_string($db, $_POST['Password_2']); 
 
     // The array push function will be able to add the exact error that we will be referring to
 
@@ -63,10 +63,10 @@ if (isset($_POST['Reg_user'])) {
 
     // Check for duplicated users
     if ($user) {
-        if ($user['UserName'] == $UserNam) {
+        if ($user['UserName'] == $UserName) {
             array_push($errors, 'Username already exists');
         }
-        if ($user['Email'] == $UserNam) {
+        if ($user['Email'] == $UserName) {
             array_push($errors, 'Email already exists');
         }
     } // End Duplicate of user
@@ -96,7 +96,7 @@ if (isset($_POST['Reg_user'])) {
 
 // we will return to the server.php to enter the login information!!!
 
-if (isset($_POST['Login_user'])) {        ### CAPITAL 'L' in login _user????????????????????????
+if (isset($_POST['Login_user'])) {       ###### ### CAPITAL 'L' in login _user????????????????????????
     $UserName = mysqli_real_escape_string($db, $_POST['$UserName']);
     $Password = mysqli_real_escape_string($db, $_POST['$Password']);
 
