@@ -11,8 +11,6 @@ include('includes/header.php');
 <form action="<?php echo htmlspecialchars($_SERVER['PHPP_SELF']); ?>" method="post">
 <fieldset>
 
-<label>First Name</label>
-<input type="text" name="FirstName" value="<?php if(isset($_POST['FirstName'])) echo $_POST['FirstName'] ?>">
 
 <label>First Name</label>
 <input type="text" name="FirstName" value="<?php if(isset($_POST['FirstName'])) echo $_POST['FirstName'] ?>">

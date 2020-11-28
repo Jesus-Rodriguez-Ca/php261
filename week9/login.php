@@ -29,3 +29,5 @@ include('includes/header.php');
 
 
 </form>
+
+<p>Haven't Registered> <a href="register.php">Register Here!</a></p>
