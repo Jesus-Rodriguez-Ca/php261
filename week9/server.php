@@ -78,7 +78,7 @@ if (isset($_POST['reg_user'])) {
 
 
     if (count($errors) == 0) {
-        $Password == md5($Password_1);
+        $Password = md5($Password_1);
 
         $query = "INSERT INTO Users (FirstName, LastName, UserName, Email, Password) 
               VALUES ('$FirstName', '$LastName', '$UserName', '$Email', '$Password') ";
@@ -96,9 +96,9 @@ if (isset($_POST['reg_user'])) {
 
 // we will return to the server.php to enter the login information!!!
 
-if (isset($_POST['Login_user'])) {       ###### ### CAPITAL 'L' in login _user????????????????????????
-    $UserName = mysqli_real_escape_string($db, $_POST['$UserName']);
-    $Password = mysqli_real_escape_string($db, $_POST['$Password']);
+if (isset($_POST['login_user'])) {       ###### ### CAPITAL 'L' in login _user????????????????????????
+    $UserName = mysqli_real_escape_string($db, $_POST['UserName']);
+    $Password = mysqli_real_escape_string($db, $_POST['Password']);
 
 
     // Check that field are not empty
@@ -109,9 +109,9 @@ if (isset($_POST['Login_user'])) {       ###### ### CAPITAL 'L' in login _user??
         array_push($errors, 'Password is required');
     }
     if (count($errors) == 0) {
-        $Password == md5($Password);
+        $Password = md5($Password);
 
-        $query = "SELECT * FROM Users WHERE username = '$UserName' AND password = '$Password' ";
+        $query = "SELECT * FROM Users WHERE UserName = '$UserName' AND Password = '$Password' ";
     
         $result = mysqli_query($db, $query);
 

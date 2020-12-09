@@ -1,6 +1,6 @@
 <?php
 include('server.php');
-include('includes/header.php'); 
+include('includes/header.php');  
 
 
 
@@ -10,7 +10,7 @@ include('includes/header.php');
 <h1>Register today</h1>
 
 
-<form action="<?php echo htmlspecialchars($_SERVER['PHPP_SELF']); ?>" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
 
 
@@ -32,7 +32,7 @@ include('includes/header.php');
 <label>Confirm Password</label>
 <input type="password" name="Password_2">
 
-<button type="submit" class="btn" name="Reg_user">Register</button>
+<button type="submit" class="btn" name="reg_user">Register</button>
 
 <button type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> '">Reset</button>
 

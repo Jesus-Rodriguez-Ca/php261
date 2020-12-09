@@ -1,14 +1,12 @@
 <?php // this is my login page
 include('server.php');
-include('includes/header.php');
-
-
+include('includes/header.php'); 
 ?>
 
 <h1>Login!</h1>
 
 
-<form action="<?php echo htmlspecialchars($_SERVER['PHPP_SELF']); ?>" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
 
 <label>User Name</label>
@@ -20,7 +18,7 @@ include('includes/header.php');
  include('includes/errors.php'); 
 ?>
 
-<button type="submit" class="btn" name="Login_user">Login</button>
+<button type="submit" class="btn" name="login_user">Login</button>
 
 <button type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
 
@@ -30,4 +28,4 @@ include('includes/header.php');
 
 </form>
 
-<p>Haven't Registered> <a href="register.php">Register Here!</a></p>
+<p>Haven't Registered? <a href="register.php"> Register Here!</a></p>

@@ -16,12 +16,14 @@ if(isset($_GET['logout'])){
 include('includes/header.php');
 ?>
 
-<h1>Welcome tour hoe page!</h1>
+<h1>Welcome to our home page!</h1>
 
+
+<!-- Left greeting-->
 <?php
 //Notification message
 if(isset($_SESSION['success'])) : ?>
-<div class="error success">
+<div class="error success left">
 <h3>
     <?php
     echo $_SESSION['success'];
@@ -30,7 +32,10 @@ if(isset($_SESSION['success'])) : ?>
 </h3>
 </div>
 <?php endif ?>
-<div class="error success">
+
+<!-- Right Greeting and logout-->
+
+<div class="error success right">
 <?php
     if(isset($_SESSION['UserName'])) : ?>
     <h3> Welcome, 
@@ -41,4 +46,9 @@ if(isset($_SESSION['success'])) : ?>
     <br>
     <p><a href="index.php?logout='1'">Log out!</a></p>
     </div>
+            
+                
+          
     <?php endif ?>
+
+    <?php include('includes/footer.php'); ?>
