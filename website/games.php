@@ -2,16 +2,20 @@
 include('config.php'); 
 include('includes/header.php');
 ?>
-<form action="" method="POST" enctype="multipart/form-data">
-            <table>
+
+<h1 class="table1"><?php echo $mainHeadline; ?></h1>
+<div class="table1">
+            <table class="content-table">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
+                        <th class="big">Id</th>
+                        <th class="big">Name</th>
+                        <th class="big">Image</th>
                         
-                        <th>Version</th>
-                        <th>Price</th>
+                        
+                        <th class="big">Version</th>
+                        <th class="big">Price</th>
+                        <th class="big">Action</th>
                     </tr>
                 </thead>
                     <?php 
@@ -24,15 +28,20 @@ include('includes/header.php');
                         while ($row = mysqli_fetch_assoc($result))
                         { 
                             ?>
-                             <tr>
-                             <td><?php echo $row['id'];   ?></td>
+                             <tr class="active-row">
+                             <td class="big"><?php echo $row['id'];   ?></td>
+                             <td class="big"><?php echo $row['Name'];   ?></td>
                                   <td>
  
  <?php echo '<img src="data:image/png;base64,'.base64_encode( $row['Image'] ).'"/>';?>
                                 </td> 
-                                 <td><?php echo $row['Name'];   ?></td>
-                                 <td><?php echo $row['Version'];    ?></td>
-                                 <td><?php echo '$ '.$row['Price']; ?></td>
+                                 
+                                 <td class="big"><?php echo $row['Version'];    ?></td>
+                                 <td class="big"><?php echo '$ '.$row['Price']; ?></td>
+                                 <td>
+ 
+ <?php echo '<img src="data:image/png;base64,'.base64_encode( $row['Image2'] ).'"/>';?>
+                                </td> 
                                 </tr>
                             <?php
                         }
@@ -42,7 +51,7 @@ include('includes/header.php');
 
             </table>
 
-        </form>
+            </div>
 
     
 <?php

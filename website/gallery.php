@@ -1,7 +1,8 @@
 <?php
 include('config.php'); 
-include('config2.php'); 
+
 include('includes/header.php');
+
 
 
 ?>
@@ -11,12 +12,13 @@ include('includes/header.php');
         <main>
         
         <h1><?php echo $mainHeadline; ?></h1>
-    
-    <?php echo '<img src="images/people'.$id.'.jpg" alt="photo">'; ?>
+      
+   
+ 
             <table class="candidates">
                 <?php foreach($people as $fullName => $image) : ?>
                 <tr>
-                    <td><img src="images/<?php echo substr($image, 0,5);   ?>.jpg" alt="<?php echo $fullName?>"></td>
+                    <td><img src="images/photo<?php    ?>.jpg" alt="<?php echo $fullName?>"></td>
                     <td><?php echo str_replace('_', ' ', $fullName);?></td>
                     <td><?php echo substr($image, 6 );?></td>
                 </tr>
