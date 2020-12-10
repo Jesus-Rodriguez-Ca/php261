@@ -9,6 +9,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Image</th>
                         <th>Version</th>
@@ -26,9 +27,10 @@
                         { 
                             ?>
                              <tr>
+                             <td><?php echo $row['id'];   ?></td>
                                   <td>
  
- <img width="100" src="data:image;base64,<?php echo  base64_encode($row['imagen']); ?>">
+ <?php echo '<img src="data:image/png;base64,'.base64_encode( $row['Image'] ).'"/>';?>
                                 </td> 
                                  <td><?php echo $row['Name'];   ?></td>
                                  <td><?php echo $row['Version'];    ?></td>
