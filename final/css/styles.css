@@ -1,38 +1,137 @@
-*{
+/*Styles for my new IMPORTANT website*/
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
-h1{
-  text-align: center;
-  color: red;
-}
-
-/*  >>>>>>>>>>     FORM STARTS HERE     <<<<<<<<<<<<<<<<<<<<<<*/
-form{
-  max-width: 580px;
-  margin: 0 auto 20px auto;
-}
-input{
-  display: block;
-  height: 30px;
-  margin-bottom:10px ;
+img{
   width: 100%;
+  background: beige;
 }
-fieldset{
-  padding: 10px;
+body{
+  
+  background: beige;
+}
+a{
+  color: #000;
+}
+a:hover{
+  font-size: 104%;
+}
+.active{
+  color: green;
+}
+.home{
+  background: beige;
+}
+.about{
+  background: beige;
 }
 .center{
   text-align: center;
 }
+header{
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.inner-header{
+  width: 940px;
+  margin: 20px auto;
+}
+#logo{
+  width: 150px;
+  float: left;
+}
+nav ul{
+  float: right;
+}
+nav li{
+  float: left;
+  margin-left: 15px;
+  list-style-type: none;
+}
+nav a{
+  text-decoration: none;
+}
+#wrapper{
+  clear: both;
+  width: 940px;
+  margin: 0 auto;
+}
+main{
+  width: 580px;
+  float: left;
+  margin: 15px;
+}
+aside{
+  width: 640px;
+  float: right;
+  background: lightblue;
+  margin: 15px;
+}
+aside img{
+  width: 100%;
+}
+footer{
+  height: 50px;
+  line-height: 50px;
+  border-top: 2px solid tan;
+  clear: both;
+}
+footer li{
+  float: left;
+  margin-right: 30px;
+  list-style-type: none;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+blockquote{
+  font-size: 1.4em;
+  margin: 20px 100px;
+}
 
-/*  >>>>>>>>>>    END OF FORM      <<<<<<<<<<<<<<<<<<<<<<*/
+h1{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.6em;
+  font-weight: 200px;
+  margin-bottom: 5px;
+}
+p{
+  margin-bottom: 22px;
+}
 
-/*  >>>>>>>>>>     HEADER STARTS HERE   <<<<<<<<<<<<<<<<<<<<<<*/
+
+/*Table*/
+
+
+table{
+  border:2px solid tan;
+  width: 480px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.candidates td:nth-child(1)
+.candidates td:nth-child(2){
+  width: 150px; 
+}
+.candidates td:nth-child(2){
+  padding-left: 20px;
+}
+/*Navbar*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
 body {
   background: #F0F8EA;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -55,16 +154,15 @@ header::after {
 }
 
 .logo {
+  width: 60px;
+  height: 60px;
+  font-size: 10px;
   float: left;
-  font-size: 1rem;
   margin: 0;
-  text-transform: uppercase;
-  font-weight: 700;
+  background-color: #E54B4B;
 }
 
-.logo span {
-  font-weight: 400;
-}
+
 
 .site-nav {
   position: absolute;
@@ -193,14 +291,216 @@ header::after {
   
 }
 
-/*  >>>>>>>>>>     ENDS HEADERE     <<<<<<<<<<<<<<<<<<<<<<*/
+/*HOME IMAGES*/
 
 
-/* Greetings */
+.portfolio {
+  display: grid;
+  grid: auto / repeat(auto-fit, minmax(15em, 1fr));
+  grid-gap: 1em;
+  background: beige;
+  padding: 7em 4em;
+  margin-bottom: 10px;
+}
 
-.left{
-  float: left;;
+.portfolio__item {
+  position: relative;
+  flex-basis: 30%;
+  margin: 0;
+  padding: 0;
+  background: #6B6E70;
+}
+
+.portfolio__desc {
+  padding: 1.5em;
+}
+
+.portfolio__title {
+  font-family: 'Roboto Condensed', sans-srif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  color:white;
+}
+
+.portfolio__image,
+.portfolio-lightbox__image{
+  width: 100%;
+  display: block;
 }
 .right{
   float: right;
+  margin-right: 20px;
+}
+.left{
+  margin-left:20px ;
+}
+.success{
+  display: inline-block;
+  width: 20%;
+  height: 80px;
+  color: #000;
+  background: white;
+  border: 1px solid #bcbcbc;
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: black;
+}
+/*Contact*/
+/* .contact-in{
+  width: 80%;
+  height: auto;
+  
+  display: flex;
+   flex-wrap: wrap;
+  padding: 10px;
+  
+  
+  
+} */
+
+.contact-form{
+  color: #000;
+  font-weight: 800;
+  width: 100%;
+  height: auto;
+  flex: 50%;
+  padding: 30px;
+  margin: 20px auto;
+  background: beige;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+}
+.contact-form h2{
+  margin-bottom: 10px;
+}
+.contact-form-txt{
+  width: 100%;
+  height: 60px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 10px;
+  /* outline: none; */
+  margin-bottom: 20px;
+  padding: 15px;
+  
+  justify-content: center;
+  align-items: center;
+}
+.contact-form-txtarea{
+  background: #fff;
+  font-size: 2em;
+  width: 100%;
+  height: 130px;
+  flex: 40px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 50px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/*Form CSS*/
+
+
+form{
+  max-width: 580px;
+  margin-bottom: 20px;
+  }
+  input{
+      margin-bottom: 10px;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  textarea{
+      width: 100%;
+      height: 30px
+  }
+  textarea{
+      height: 120px;
+  }
+  fieldset{
+      color: darkgray;
+      padding: 10px 15px 10px 10px;
+  }
+  label{
+      display:block;
+      margin-bottom: 5px;
+  }
+  .box{
+      width: 600px;
+      margin: 20px auto;
+      background: beige;
+      padding: 20px;
+      border: 1px solid green;
+  }
+  select{
+      margin-bottom: 10px;
+  }
+  span{
+      display: block;
+      color: red;
+      font-style: italic;
+  }
+li{
+  list-style-type: none;
+}
+.big{
+  font-size: 2em;
+}
+.table1{
+  margin: auto;
+width: 50%;
+padding: 10px;
+}
+table{
+  width: 100%;
+ 
+ 
+}
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }

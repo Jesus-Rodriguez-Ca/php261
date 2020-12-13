@@ -13,20 +13,5 @@ if(isset($_GET['logout'])){
     header('Location: login.php');
 }
 
-
-
-include('config.php'); 
-
+include('includes/header.php');
 ?>
-<?php include('includes/header.php');
-?>
-
-<h1 class="table1"><?php echo $mainHeadline; ?></h1>
-<div class="table1">
-    <img src="images/mydb.PNG" alt="image">
-</div>
-
-<?php include('includes/footer.php');
-?>
-
-
