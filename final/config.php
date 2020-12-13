@@ -30,6 +30,8 @@ include('credentials.php');
 
 
 
+
+
 //PLEASE REMEMBER - THIS IS PLACED AT THE VERY BOTTOM OF YOUR CONFIG FILE
 function myerror($myFile, $myLine, $errorMsg){
     if(defined('DEBUG') && DEBUG ){
