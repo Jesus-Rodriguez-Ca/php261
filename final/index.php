@@ -16,7 +16,7 @@ if(isset($_GET['logout'])){
 include('includes/header.php');
 ?>
 
-<h1>Welcome to our home page!</h1>
+
 
 
 <!-- Left greeting-->
@@ -46,16 +46,23 @@ if(isset($_SESSION['success'])) : ?>
     <br>
     <p><a href="index.php?logout='1'">Log out!</a></p>
     </div>
-    <div id="wrapper">
+            
+         <div id="wrapper">
         <h1 class="<?php echo $center; ?>"><?php echo $mainHeadline; ?></h1>
     <div class="home">
     <img  src="images/gamer.jpg" alt="photo">
     </div>
-        <blockquote>
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        
-        
-        </blockquote> 
+    <blockquote cite="https://www.theverge.com/2014/7/21/5919973/inside-the-life-of-a-pro-gamer">
+        "The life of a pro gamer requires uncommon discipline and perseverance,
+         because the obstacles to success are as numerous outside the game as
+          they are fearsome inside it. Parents won’t respect what you do,
+           fans won’t understand when you fail, and most of the money goes to
+            only the very best. As tough as that is, passion, team camaraderie, 
+            and a growing acceptance of
+         e-sports as a legitimate career path are making competitive gaming bigger than ever."
+         - Vlad Savov - </blockquote>
+
+        <h2>List of top 3 Nintendo games</h2>
         <div class="portfolio">
   
 
@@ -63,14 +70,14 @@ if(isset($_SESSION['success'])) : ?>
     <img src="images/photo1.jpg" alt="" class="portfolio__image">
     <div class="portfolio__desc">
       <h3 class="portfolio__title">Super Smach Ultimate</h3>
-      <a href="http://www.jesusrcode.com/final/game-view.php?id=1" class="button">More about the game!</a>
+      <a href="https://www.jesusrcode.com/it261/final/game-view.php?id=1" class="button">More about the game!</a>
     </div>
   </div>
   <div class="portfolio__item">
     <img src="images/photo2.jpg" alt="" class="portfolio__image">
     <div class="portfolio__desc">
       <h3 class="portfolio__title">Zelda Breath of the Wild</h3>
-      <a href="http://www.jesusrcode.com/final/game-view.php?id=2" class="button">More about the game!</a>
+      <a href="https://www.jesusrcode.com/it261/final/game-view.php?id=2" class="button">More about the game!</a>
     </div>
     
   </div>
@@ -78,11 +85,10 @@ if(isset($_SESSION['success'])) : ?>
     <img src="images/photo3.jpg" alt="" class="portfolio__image">
     <div class="portfolio__desc">
       <h3 class="portfolio__title">Luigi Mansion Ghost</h3>
-      <a href="http://www.jesusrcode.com/final/game-view.php?id=3" class="button" role="button">More about the game!</a>
+      <a href="https://www.jesusrcode.com/it261/final/game-view.php?id=3" class="button" role="button">More about the game!</a>
     </div>
   </div>
-</div>
-                
+</div>       
           
     <?php endif ?>
 

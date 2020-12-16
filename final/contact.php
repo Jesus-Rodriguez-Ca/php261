@@ -14,9 +14,12 @@ if (isset($_GET['logout'])) {
 }
 
 include('includes/header.php');
-include('config.php');
+
+
 
 ?>
+        <h1 class="<?php echo $center; ?>"><?php echo $mainHeadline; ?></h1>
+
 <div class="contact-in">
     <form class="contact-form" action="" method="post">
         <fieldset>
@@ -65,10 +68,9 @@ include('config.php');
             <span><?php echo $commentsErr; ?></span>
 
 
-            <input type="radio" name="privacy" value="<?php
-                                                        if (isset($_POST['privacy'])) echo htmlspecialchars($_POST['privacy']); ?>">
-            I agree to your Privacy Policy
-            <span><?php echo $privacyErr; ?></span>
+            <li><input type="radio" name="privacy" value="privacy">
+            I agree to your Privacy Policy</li>
+            
 
             <!--Radio buttons and checkboxes are very similar -->
             <input type="submit" value="Send it!">
@@ -77,4 +79,5 @@ include('config.php');
 
     </form>
 </div>
+
 <?php include('includes/footer.php'); ?>

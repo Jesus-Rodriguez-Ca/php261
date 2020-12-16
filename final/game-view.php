@@ -1,4 +1,5 @@
 <?php
+include('credentials.php'); 
 //people view page
 session_start();
 if(!isset($_SESSION['UserName'])){
@@ -11,7 +12,7 @@ if(isset($_GET['logout'])){
     unset($_SESSION['UserName']);
     header('Location: login.php');
 }
-include('config.php');
+
 
 
 //Do you remember the isset $_GET
@@ -22,23 +23,25 @@ if(isset($_GET['id'])){
     header('Location:games.php');
 } //Close if else statement for isset
 
-$sql ='SELECT * FROM Games WHERE id = '.$id.'';
+
 
 // We are going to conect to database
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 /* or die(myerror(__FILE__,__LINE__,mysqli_connect_error())) */;
 // we extrat the data here
-$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                         $db = mysqli_select_db($connection, 'jesuscodes');  
+/* $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); */
+                         $db = mysqli_select_db($iConn, 'jesuscodes');  
 
-                        $query = 'SELECT * FROM Games';
-                        $result2 = mysqli_query( $connection,$query );
+                    /*   $result2 = mysqli_query( $connection,$query ); */
+  $sql ='SELECT * FROM Games WHERE id = '.$id.''; 
+ 
 
 $result = mysqli_query($iConn, $sql)/* or die (myerror(__FILE__,__LINE__,mysqli_error($iConn)))*/;
 
 if(mysqli_num_rows($result) > 0){ // show the records
     while($row = mysqli_fetch_assoc($result)){
+        
         $Name = stripslashes($row['Name']);
         $Version = stripslashes($row['Version']);
         $Price = stripslashes($row['Price']);
@@ -59,9 +62,9 @@ include('includes/header.php');
 <?php
 if($Feedback == ''){
     echo '<ul>';
-    echo '<li><b>Name:</b>'.$Name.'</li>';
-    echo '<li><b>Version:</b>'.$Version.'</li>';
-    echo '<li><b>Price:</b>$'.$Price.'</li>';
+    echo '<li><b>Name: </b>'.$Name.'</li>';
+    echo '<li><b>Version: </b>'.$Version.'</li>';
+    echo '<li><b>Price: </b>$'.$Price.'</li>';
     echo '</ul>';
 
     echo '<br>';

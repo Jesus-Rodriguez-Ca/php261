@@ -1,4 +1,5 @@
 <?php
+include('credentials.php'); 
 // In order to view this page, a user must have registered and logged in,
 // otherwise, he/she must be directed to do so!!!
 session_start();
@@ -14,8 +15,10 @@ if(isset($_GET['logout'])){
 }
 
 include('includes/header.php');
-include('config.php');
+
 ?>
+        <h1 class="<?php echo $center; ?>"><?php echo $mainHeadline; ?></h1>
+
 <div class="table1">
             <table class="content-table">
                 <thead>

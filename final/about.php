@@ -15,7 +15,7 @@ if(isset($_GET['logout'])){
 
 
 
-include('config.php'); 
+
 
 ?>
 <?php include('includes/header.php');

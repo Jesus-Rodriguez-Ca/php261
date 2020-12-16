@@ -1,5 +1,5 @@
 <?php
-include('config.php'); 
+/* include('config.php');  */
 include('includes/header.php');
 ?>
 
@@ -13,7 +13,7 @@ include('includes/header.php');
       
     </main>
         <aside>
-        <h3>This is my aside</h3>
+        <h3>Thanks again!!!!!</h3>
         </aside>
         
 <?php

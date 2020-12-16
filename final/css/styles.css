@@ -6,6 +6,7 @@
   box-sizing: border-box;
   
 }
+
 img{
   width: 100%;
   background: beige;
@@ -19,6 +20,10 @@ a{
 }
 a:hover{
   font-size: 104%;
+}
+h2{
+  text-align: center;
+  font-size: 1.5em;
 }
 .active{
   color: green;
