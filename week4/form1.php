@@ -1,0 +1,37 @@
+<?php
+/*
+ Our first form - form elements - form tag, labels, input
+if(isset($_GET['today'])){
+    
+}
+
+*/
+
+
+if(isset($_POST['name'],
+         $_POST['email'])
+  ){
+    
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    
+    echo ucwords('Student name: '.$name.'<br>'.'Student\'s Email: '.$email);
+}else{// show the form
+    echo '
+        <form action="" method="post">
+        <label>Name</label>
+        <input type="" name="name">
+        <br>
+        
+        <label>Email</label>
+        <input type="email" name="email">
+        <br>
+        <input type="submit" value="Send it!">
+        
+        
+        </form>
+    
+    
+    
+    ';
+}
