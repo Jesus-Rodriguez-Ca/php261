@@ -41,4 +41,4 @@ include('includes/errors.php');
 ?>
 </fieldset>
 </form>
-<p class="center">Already a member?<a href="login.php">Please sign in!</a> </p>
+<p class="center">Already a member?<a href="login.php"> Please sign in!</a> </p>
